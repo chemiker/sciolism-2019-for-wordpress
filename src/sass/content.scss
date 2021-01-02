@@ -1,0 +1,510 @@
+html {
+	font: #{$fontSize}/#{$lineHeight} $sans;
+	color: $textColor;
+	background-color: #FFF;
+}
+
+article {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+
+	a,
+	a:visited {
+		color: $lightBlue;
+		text-decoration: none;
+		border-bottom: 2px solid $lightBlue;
+
+	}
+
+	a:hover {
+		border: none;
+	}
+
+	hr {
+		margin: $headerSpacer auto;
+	}
+
+	p {
+		line-height: $lineHeight;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	h1,
+	h2,
+	h2 a, h2 a:visited,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #000;
+		margin: $lineHeight 0 0.8em;
+	}
+
+	&.post,
+	&.page {
+		h2 {
+			&:first-of-type {
+				text-align: center;
+				font-weight: 500;
+				font-size: 2.1rem;
+			}
+
+			a,
+			a:visited {
+				border: none;
+
+				&:hover {
+					color: $lightBlue;
+				}
+			}
+
+			&:first-of-type {
+				margin: #{$headerSpacer * 0.4} 0 #{$headerSpacer * 2};
+				line-height: 1.5em;
+
+				&.screenReaderText {
+					&:after {
+						display: none;
+					}
+				}
+
+				&:after {
+					margin: 0 auto;
+					border: {
+						bottom: #{$headerSpacer * 0.2} solid $grey;
+					}
+
+					width: 3rem;
+					display: block;
+					position: relative;
+					content: "";
+					top: $headerSpacer * 0.5 + $headerSpacer * 0.1;
+				}
+			}
+		}
+	}
+}
+
+blockquote,
+pre,
+.highlightText {
+	 border-left: {
+		 width: 5px;
+		 style: solid;
+	 }
+	 padding: $headerSpacer * 0.4;
+ }
+
+blockquote {
+	font-family: $heading;
+	font-size: 1.2rem;
+	border-color: $green;
+	margin: {
+		@include setMultiProperty(left right, 0);
+	}
+
+	&,
+	a,
+	a:visited {
+		color: lighten($textColor, 5%);
+	}
+
+	a,
+	a:visited {
+		border-color: lighten($textColor, 5%);
+	}
+
+	p {
+		&:first-of-type {
+			display: inline-block;
+			margin-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	cite {
+		font: {
+			weight: bold;
+			style: normal;
+		}
+		text-align: right;
+		display: block;
+	}
+}
+
+kbd,
+code,
+pre,
+table,
+blockquote cite,
+.highlightText {
+	font-size: $smallerTextSize * 1.125;
+}
+
+.highlightText {
+	border-color: $orange;
+	font: #{$fontSize}/1.5em $code;
+
+	p {
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+main {
+	max-width: $siteWidth - 2 * $contentPadding;
+	margin: calc(	#{$headerSpacer} * 0.75 * 2 + /* margin */
+								#{$headerSpacer} * 1.75 + /* Title */
+								#{$headerSpacer} + /* description */
+								#{$headerSpacer} * 1.5 + /* space to main */
+								#{$headerSpacer} * 0.1 ) /* border */
+					auto 0;
+	padding: 0px $contentPadding;
+	display: grid;
+	grid-template-columns: 100%;
+	justify-content: center;
+	gap: $headerSpacer;
+}
+
+iframe {
+	padding: 0;
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	background: transparent;
+}
+
+img {
+	max-width: calc(100% - 4px);
+	height: auto;
+	box-shadow: 2px 2px 0px $darkGrey;
+
+	&.noShadow {
+		box-shadow: none;
+	}
+}
+
+figure {
+	height: auto;
+	max-width: calc(100% - 4px);
+	clear: both;
+	margin: {
+		@include setMultiProperty(left right, 0);
+		bottom: $lineHeight;
+	}
+
+	a,
+	a:visited {
+		border-bottom: none;
+	}
+
+	figcaption {
+		text-align: center;
+		font: $smallerTextSize#{/1rem} $code;
+		color: $darkerGrey;
+	}
+
+	&.noShadow img {
+		box-shadow: none;
+	}
+}
+
+div.articleMiniMeta a,
+div.articleMiniMeta a:visited {
+	border: none;
+
+	&:hover {
+		color: #000;
+	}
+}
+
+div.articleMiniMeta a,
+div.articleMiniMeta a:visited
+#listHeadline,
+figure figcaption {
+	&,
+	a,
+	a:visited {
+		color: $darkerGrey;
+	}
+
+	a,
+	a:visited {
+		border-bottom: 2px solid $darkerGrey;
+	}
+}
+
+div.articleMiniMeta {
+	text-align: center;
+}
+
+div#articleMeta {
+	display: grid;
+	grid-template-columns: repeat( 2, calc(50% - #{$footerInnerSpacing}) );
+	gap: $footerInnerSpacing;
+	justify-content: center;
+
+	&:before {
+		position: relative;
+		top: 0;
+		content: "";
+		margin: 0 auto 3rem auto ;
+		grid-column: 1 / 3;
+	}
+
+	h4 {
+		margin-bottom: 0px;
+		color: $textColor;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		i {
+			display: inline-block;
+			width: 1.5rem;
+			text-align: center;
+			margin-right: $iconSpacer;
+			color: $darkGrey;
+			font-size: $smallerTextSize;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		font: {
+			size: $smallerTextSize;
+			family: $code;
+		}
+		padding: 0px;
+		margin-bottom: 0px;
+
+		a,
+		a:visited {
+			color: $textColor;
+			background-color: $lightGrey;
+			padding: 5px;
+			margin-right: $iconSpacer;
+
+			&:hover {
+				background-color: $darkerGrey;
+				color: #FFF;
+			}
+		}
+
+		li {
+			margin-left: 7 * $iconSpacer;
+		}
+
+		&#articleTags {
+			a,
+			a:visited {
+				&:before {
+					content: "#";
+				}
+			}
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading;
+}
+
+h2#listHeadline {
+	text-align: center;
+
+	em {
+		font: {
+			style: normal;
+			weight: normal;
+		}
+	}
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+h5,
+h6 {
+	font-size: 1em;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: $lightBlue;
+
+	&.more-link,
+	&.more-link:visited {
+		display: inline-block;
+		margin: 2em auto;
+		border: none;
+		text-align: center;
+
+		.readMore {
+			background-color: $lightBlue;
+			padding: 8px 10px;
+			color: #FFF;
+			border: none;
+			box-shadow: 2px 2px 0px $darkGrey;
+			text-align: center;
+		}
+		
+		&:hover {
+			.readMore {
+				background-color: $red;
+			}
+		}
+	}
+}
+
+kbd,
+code,
+pre,
+address,
+time.meta,
+span.meta,
+.readMore {
+	font-family: $code;
+}
+
+address {
+	font-style: normal;
+}
+
+time.meta,
+span.meta,
+i.meta {
+	font-size: $smallerTextSize;
+	margin-right: $iconSpacer * 1.2;
+
+	a,
+	a:visited {
+		border: none;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+time.meta {
+	margin-right: 0.5rem;
+}
+
+span.meta {
+	margin-left: 0.5rem;
+}
+
+mark,
+kbd,
+code {
+	padding: 5px;
+}
+
+mark {
+	background-color: $yellow;
+}
+
+kbd,
+code,
+pre,
+blockquote,
+.highlightText {
+	background-color: $grey;
+}
+
+pre {
+	display: block;
+	line-height: 1.3em;
+	border-color: $lightBlue;
+	overflow: scroll;
+
+	code {
+		background: none;
+		padding: 0;
+	}
+}
+
+abbr[title] {
+	border-bottom: 2px dashed $green;
+	cursor: help;
+	text-decoration: none;
+}
+
+table {
+	width: auto;
+	padding: 5px;
+	border-spacing: 0px;
+	margin: {
+		@include setMultiProperty(left right, auto);
+	}
+	border: {
+		@include setMultiProperty(top bottom, 4px solid $grey);
+	}
+
+	thead {
+		th {
+			border-bottom: 2px solid $grey;
+			margin: 0px;
+			font-weight: bold;
+		}
+	}
+
+	td, th {
+		padding: 5px 10px 0;
+	}
+}
+
+
+hr.separator,
+div#articleMeta:before {
+	@include setMultiProperty(height width, #{$headerSpacer * 0.2})
+	border: #{$headerSpacer * 0.15} solid $lightGrey;
+	background-color: $grey;
+	transform: rotate(45deg);
+}
+
+.screenReaderText,
+.screen-reader-text,
+input[type=submit].screen-reader-text {
+	// Inspired by https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+	@include setMultiProperty(border padding margin, 0px);
+	@include setMultiProperty(height width, 1px);
+	overflow: hidden;
+	position: absolute;
+}

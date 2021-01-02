@@ -1,0 +1,50 @@
+/**
+ * THEMEINFO
+ */
+@import "theme-info";
+
+/**
+ * CSS Normalize
+ */
+@import "../../node_modules/normalize.css/normalize";
+
+/**
+ * Settings
+ */
+@import "settings";
+
+/**
+ * CONTENT
+ */
+@import "content";
+
+/**
+ * HEADER
+ */
+@import "header";
+
+/**
+ * NAVIGATION
+ */
+@import "navigation";
+
+/**
+ * FORM
+ */
+@import "form";
+
+/**
+ * FOOTER
+ */
+@import "footer";
+
+/*
+ * WordPress SPECIFIC STYLING
+ */
+@import "wordpress";
+@import "comments";
+
+/*
+ * ADJUSTMENTENTS FOR MOBILE DEVIVES
+ */
+@import "mobile";

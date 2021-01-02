@@ -1,0 +1,128 @@
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 $contentPadding $contentPadding 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 $contentPadding $contentPadding;
+}
+
+.wp-block-tag-cloud {
+	text-align: center;
+}
+
+.wp-caption {}
+
+.wp-block-calendar {
+	a,
+	a:visited {
+		text-decoration: none;
+	}
+}
+
+.gallery-caption,
+.wp-caption-text {
+	font: {
+		size: $smallerTextSize;
+		style: italic;
+	}
+	text-align: center;
+}
+
+.wp-caption-text {
+	margin-top: $iconSpacer;
+}
+
+
+.wp-block-cover,
+.wp-block-cover-image {
+	height: inherit;
+}
+
+.gallery {
+	figure {
+		display: inline-block;
+		margin-right: $contentPadding;
+		vertical-align: top;
+		text-align: center;
+	}
+
+	figcaption {
+		line-height: 1.1em;
+	}
+
+	@each $columns, $width in $galleries {
+		&-columns-#{$columns} {
+			figure {
+				width: $width;
+			}
+		}
+	}
+}
+
+figure.wp-block-gallery {
+	figure {
+		max-width: 100%;
+	}
+}
+
+.has-large-font-size {
+	line-height: 1.2em;
+}
+
+.dashicons,
+.dashicons-before:before {
+	line-height: $lineHeight;
+	margin-right: $iconSpacer;
+}
+
+#postNavigation {
+	text-align: center;
+
+	span {
+		display: inline-block;
+	}
+}
+
+.previous-post {
+	text-align: right;
+	margin-right: $headerSpacer / 2;
+}
+
+.next-post {
+	margin-left: $headerSpacer / 2;
+}
+
+.previous-post,
+.next-post {
+	display: block;
+	
+	& a,
+	& a:visited {
+		font: $smallerTextSize#{/1rem} $code;
+		color: $darkerGrey;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+.sticky,
+.bypostauthor {
+	// We do not have any specific CSS for both classes but we put something here to skip the error in Theme Check.
+	display: block;
+}
+
+.mejs-container {
+	a,
+	a:visited {
+		border-bottom: none;
+	}
+}

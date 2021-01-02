@@ -1,0 +1,64 @@
+/**
+ * HEADER
+ */
+
+#siteDescription {
+	font: #{$headerSpacer * 0.4}/#{$headerSpacer} $code;
+	margin-bottom: $headerSpacer * 0.75;
+	display: block;
+	color: $textColor;
+	@include transition(all $headerAnimationSpeed);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	width: 100%;
+	background-color: $grey;
+	opacity: 0.98;
+	text-align: center;
+	border-bottom: #{$headerSpacer * 0.2} solid $darkGrey;
+
+	a,
+	a:visited {
+		color: $darkerGrey;
+		text-decoration: none;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	h1 {
+		@include transition(all $headerAnimationSpeed);
+		margin: $headerSpacer * 0.75 0 0;
+		font-size: $headerSpacer * 1.6;
+		line-height: $headerSpacer * 1.75;
+		font-weight: 500;
+
+		&.withLogo {
+			height: $headerSpacer; // Custom logo height?
+			text-indent: -9999px;
+			background-size: auto 100%;
+		}
+	}
+
+	&.small {
+		h1.withLogo {
+			height: $headerSpacer * 0.5;
+			background-size: auto 100%;
+		}
+
+		h1 {
+			font-size: $headerSpacer;
+			margin: {
+				@include setMultiProperty(top bottom, $headerSpacer * 0.2);
+			}
+		}
+
+		#siteDescription {
+			display: none;
+		}
+	}
+}

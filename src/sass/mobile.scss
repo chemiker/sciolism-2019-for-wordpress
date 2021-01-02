@@ -1,0 +1,82 @@
+@media only screen and (max-width: 420px) {
+	html {
+		line-height: 1.7em;
+	}
+
+	header {
+		h1 {
+			margin: $headerSpacer * 0.2 0 0;
+			font-size: 3em;
+			line-height: $headerSpacer * 1.5;
+		}
+	}
+
+	#siteDescription {
+		margin-bottom: $headerSpacer * 0.2;
+	}
+
+	main {
+		padding: 0;
+		margin-top: calc( #{$headerSpacer} * 0.2 * 2 + /* margin */
+			#{$headerSpacer} * 1.75 + /* Title */
+			#{$headerSpacer} + /* description */
+			#{$headerSpacer} * 0.5 + /* space to main */
+			#{$headerSpacer} * 0.1 ) /* border */;
+		width: 90%;
+	}
+
+	div#articleMeta {
+		gap: 1rem;
+
+		h4 {
+			font-size: 1.1rem;
+		}
+
+		&:before {
+			margin-bottom: 2rem;
+		}
+	}
+
+	article h2 {
+		& a,
+		& a:visited {
+			font-size: 2rem;
+		}
+	}
+
+	article h2:first-of-type {
+		margin-bottom: 0.83em; // Standard Browser margin-bottom for <h1>
+
+		&:after {
+			display: none;
+		}
+	}
+
+	span {
+		&.metaSeparator {
+			display: none;
+		}
+
+		&.meta {
+			display: block;
+		}
+	}
+
+	footer {
+		nav#mainNavigation,
+		aside#sideNavigation,
+		form {
+			flex-basis: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	body {
+		font: #{$fontSize*0.85}/#{$lineHeight} $sans;
+	}
+
+	footer {
+		justify-content: left;
+	}
+}

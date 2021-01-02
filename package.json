@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@openfonts/roboto-slab_all": "^1.0.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "hack-font": "^3.3.0",
+    "merge-stream": "^2.0.0",
+    "normalize.css": "^8.0.1",
+    "npm-font-open-sans": "^1.1.0"
+  }
+}

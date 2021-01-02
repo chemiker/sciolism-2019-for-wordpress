@@ -1,0 +1,72 @@
+.commentlist {
+	@include setMultiProperty(margin padding, 0px);
+	
+	&,
+	ul {
+		list-style-type: none;
+	}
+
+	&>li {
+		margin: $headerSpacer auto;
+	}
+
+	&>li {
+		article {
+			footer {
+				@include setMultiProperty(background border, none);
+
+				div {
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+}
+
+.comment-author,
+.comment-metadata {
+	text-align: center;
+}
+
+.comment-author {
+	img {
+		display: block;
+		margin: 0 auto $smallerTextSize;
+	}
+}
+
+.wp-block-latest-comments {
+	.avatar {
+		border-radius: 0px;
+	}
+}
+
+.wp-block-latest-comments__comment-meta {
+	&,
+	a,
+	a:visited {
+		font: $smallerTextSize#{/1rem} $code;
+		@include setMultiProperty(color border-color, $darkerGrey);
+	}
+}
+
+.comment-metadata,
+.comment-author,
+.reply {
+	&,
+	a,
+	a:visited {
+		font: $smallerTextSize#{/1rem} $code;
+		border-width: 1px;
+	}
+}
+
+.comment-metadata,
+.reply {
+	&,
+	a,
+	a:visited {
+		@include setMultiProperty(color border-color, $darkerGrey);
+	}
+}
+

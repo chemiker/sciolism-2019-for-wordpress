@@ -1,0 +1,12 @@
+.DS_Store
+/node_modules
+/dist/
+/js/
+/fonts/
+/src/sass/fonts.scss
+/yarn-error.log
+/*.php
+/*.css
+/readme.txt
+/screenshot.png
+/license.txt

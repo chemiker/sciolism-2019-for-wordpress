@@ -1,0 +1,32 @@
+/*
+ * FUNCTIONS (Mixins)
+ */
+
+/**
+ * [setMultiProperty Mixing to assing values to multiple properties at once]
+ * @param {string} $attributes
+ * @param {string} $value
+ *
+ * @example @include setMultiProperty(padding margin, 30px);
+ */
+
+@mixin setMultiProperty($attributes, $property) {
+	@each $attribute in $attributes {
+		#{$attribute}: $property
+	}
+}
+
+/**
+ * [transition Mixing to set transistion with all browser specific propeties]
+ * @param {string} $arguments
+ *
+ * @example @include setMultiProperty(padding margin, 30px);
+ */
+
+@mixin transition($property) {
+	-webkit-transition: $property;
+	-moz-transition: $property;
+	-ms-transition: $property;
+	-o-transition: $property;
+	transition: $property;
+}

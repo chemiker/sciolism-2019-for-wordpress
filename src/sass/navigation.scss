@@ -1,0 +1,79 @@
+/**
+ * NAVIGATION
+ */
+
+div.nav-links {
+	ul {
+		&.page-numbers {
+			margin: 0px auto #{$headerSpacer} auto;
+			list-style-type: none;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				margin: 0 0.1rem;
+
+				&.disabled:before {
+					content: "\22EF";
+					color: $darkerGrey;
+				}
+
+				a, a:visited,
+				span.current {
+					display: block;
+					@include setMultiProperty(width height line-height, 35px);
+				}
+
+				a, a:visited {
+					font-family: $heading;
+					background-color: $grey;
+					color: $textColor;
+
+					&.prev,
+					&.next {
+						background: none;
+					}
+				}
+
+				a,
+				a:visited {
+					&:hover {
+						background-color: $lightBlue;
+						color: #FFF;
+
+						&.prev,
+						&.next {
+							background: none;
+							color: $lightBlue;
+						}
+					}
+				}
+
+				span.current {
+					background-color: $darkerGrey;
+					color: #FFF;
+				}
+
+				&.page-numbers {
+					a, a:visited {
+						display: block;
+						@include setMultiProperty(width height line-height, 35px);
+
+						font-family: $heading;
+						background-color: $grey;
+						color: $textColor;
+					}
+
+					&.current {
+						a, a:visited {
+							background-color: $darkerGrey;
+							color: #FFF;
+						}
+					}
+
+					
+				}
+			}
+		}
+	}
+}

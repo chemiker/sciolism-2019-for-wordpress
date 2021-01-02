@@ -1,0 +1,256 @@
+/**
+ * Settings
+ */
+@import "settings";
+
+body {
+	font: #{$fontSize}/#{$lineHeight} $sans;
+	color: $textColor;
+	background-color: #FFF;
+}
+
+h1,
+h2,
+h2 a, h2 a:visited,
+h3,
+h4,
+h5,
+h6,
+.editor-post-title__block {
+	color: #000;
+	margin: $lineHeight auto 0.8em auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-post-title__block {
+	font-family: $heading;
+}
+
+.wp-block,
+.editor-post-title__block {
+    max-width: $siteWidth;
+}
+
+a,
+a:visited {
+	color: $lightBlue;
+	text-decoration: none;
+	border-bottom: 2px solid $lightBlue;
+
+}
+
+a:hover {
+	border: none;
+}
+
+hr {
+	margin: $headerSpacer auto;
+}
+
+blockquote,
+pre,
+.highlightText {
+	 border-left: {
+		 width: 5px;
+		 style: solid;
+	 }
+	 padding: $headerSpacer * 0.4;
+ }
+
+blockquote {
+	font-family: $heading;
+	font-size: 1.2rem;
+	border-color: $green;
+	margin: {
+		@include setMultiProperty(left right, 0);
+	}
+
+	&,
+	a,
+	a:visited {
+		color: lighten($textColor, 5%);
+	}
+
+	a,
+	a:visited {
+		border-color: lighten($textColor, 5%);
+	}
+
+	p {
+		&:first-of-type {
+			display: inline-block;
+			margin-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	cite {
+		font: {
+			weight: bold;
+			style: normal;
+		}
+		text-align: right;
+		display: block;
+	}
+}
+
+kbd,
+code,
+pre,
+table,
+blockquote cite,
+.highlightText {
+	font-size: $smallerTextSize * 1.125;
+}
+
+.highlightText {
+	border-color: $orange;
+	font: #{$fontSize}/1.5em $code;
+
+	p {
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+iframe {
+	padding: 0;
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	background: transparent;
+}
+
+img {
+	max-width: calc(100% - 5px);
+	box-shadow: 2px 2px 0px $darkGrey;
+
+	&.noShadow {
+		box-shadow: none;
+	}
+}
+
+figure {
+	margin: {
+		@include setMultiProperty(left right, 0);
+		bottom: $lineHeight;
+	}
+
+	a,
+	a:visited {
+		border-bottom: none;
+	}
+
+	figcaption {
+		text-align: center;
+
+		&,
+		h4 {
+			font: $smallerTextSize#{/1rem} $code;
+		}
+
+		&,
+		h4,
+		a,
+		a:visited {
+			color: $darkerGrey;
+		}
+
+		h4 {
+			margin: 0;
+		}
+
+		a,
+		a:visited {
+			border-bottom: 2px solid $darkerGrey;
+		}
+	}
+
+	&.noShadow img {
+		box-shadow: none;
+	}
+}
+
+kbd,
+code,
+pre,
+address,
+time.meta,
+span.meta {
+	font-family: $code;
+}
+
+address {
+	font-style: normal;
+}
+
+mark,
+kbd,
+code {
+	padding: 5px;
+}
+
+mark {
+	background-color: $yellow;
+}
+
+kbd,
+code,
+pre,
+blockquote,
+.highlightText {
+	background-color: $grey;
+}
+
+pre {
+	display: block;
+	line-height: 1.3em;
+	border-color: $lightBlue;
+	overflow: scroll;
+
+	code {
+		background: none;
+		padding: 0;
+	}
+}
+
+abbr[title] {
+	border-bottom: 2px dashed $green;
+	cursor: help;
+	text-decoration: none;
+}
+
+table {
+	width: auto;
+	padding: 5px;
+	border-spacing: 0px;
+	margin: {
+		@include setMultiProperty(left right, auto);
+	}
+	border: {
+		@include setMultiProperty(top bottom, 4px solid $grey);
+	}
+
+	th {
+		border-bottom: 2px solid $grey;
+		margin: 0px;
+		font-weight: bold;
+	}
+
+	td, th {
+		padding: 5px 10px 0;
+	}
+}

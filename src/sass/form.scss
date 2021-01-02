@@ -1,0 +1,58 @@
+.comment-respond {
+	label {
+		display: inline-block;
+		min-width: 100px;
+	}
+}
+
+input,
+button {
+	font-family: $code;
+	border: {
+		@include setMultiProperty(width radius, 0);
+		bottom: #{$headerSpacer * 0.08} solid $darkGrey;
+	}
+
+	padding: $iconSpacer;
+}
+
+input {
+	&.search-field {
+		width: calc(100% - #{$iconSpacer * 8});
+		padding: $borderRadius;
+		-webkit-appearance: none;
+		border: {
+			width: 0;
+			radius: 0;
+			bottom: #{$headerSpacer * 0.08} solid $darkGrey;
+		}
+		font: {
+			family: $heading;
+			size: 1.5em;
+			weight: bold;
+		}
+		background-color: $grey;
+
+		&,
+		&::placeholder {
+			color: $darkerGrey;
+		}
+	}
+}
+
+textarea,
+input[type=submit],
+button[type=submit] {
+	border: #{$headerSpacer * 0.08} solid $darkGrey;
+}
+
+input[type=submit],
+button[type=submit] {
+	padding: $iconSpacer 3 * $iconSpacer;
+}
+
+input[type=submit]:hover,
+button[type=submit]:hover {
+	cursor: pointer;
+	background-color: $darkGrey;
+}

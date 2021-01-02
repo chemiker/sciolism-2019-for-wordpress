@@ -1,0 +1,60 @@
+/*
+ * FUNCTIONS (Mixins)
+ */
+@import "functions";
+
+/**
+ * COLORS, FONTS & DIMENSIONS
+ */
+
+// Dimensions & Animations
+$siteWidth: 700px;
+$headerAnimationSpeed: 0.3s;
+$footerWidth: $siteWidth + 50;
+$smallBorderRadius: 3px;
+$borderRadius: 5px;
+
+// Spacer
+$contentPadding: 20px;
+$headerSpacer: 2rem;
+$footerInnerSpacing: $headerSpacer * 0.5;
+$iconSpacer: 0.3rem;
+
+$galleries : (
+	("1", $siteWidth - $contentPadding ),
+	("2", ( ( $siteWidth - ( 4 * $contentPadding ) ) / 2 )),
+	("3", ( ( $siteWidth - ( 5 * $contentPadding ) ) / 3 )),
+	("4", ( ( $siteWidth - ( 6 * $contentPadding ) ) / 4 )),
+	("5", ( ( $siteWidth - ( 7 * $contentPadding ) ) / 5 )),
+	("6", ( ( $siteWidth - ( 8 * $contentPadding ) ) / 6 )),
+	("7", ( ( $siteWidth - ( 9 * $contentPadding ) ) / 7 )),
+	("8", ( ( $siteWidth - ( 10 * $contentPadding ) ) / 8 )),
+	("9", ( ( $siteWidth - ( 11 * $contentPadding ) ) / 9 ))
+);
+
+// Fonts & Icons
+@import "fonts";
+$sans: "Open Sans", "Lucida Grande", Helvetica, sans;
+$heading: "Roboto Slab", "Times New Roman", sans-serif;
+$code: "Hack", System, sans;
+$icon: "Font Awesome 5 Free";
+$fontSize: 18px;
+$smallerTextSize: 0.8em;
+$lineHeight: 1.8em;
+$iconSpacer: 0.2em;
+
+// Primary
+$lightBlue: #006EDA;
+$blue: #183c50;
+$red: #e93b45;
+$yellow: #FFDC00;
+$orange: #FD671A;
+$green: #008000;
+$purple: #b13cad;
+$lightGrey: #F3F3F3;
+$grey: #E7E7E7;
+$darkGrey: #D9D9D9;
+$darkerGrey: darken($grey, 45%);
+$textColor: #585858;
+$darkModeGrey: #222;
+$darkModeAlternativeTextColor: #444;
