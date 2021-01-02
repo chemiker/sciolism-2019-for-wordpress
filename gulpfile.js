@@ -118,6 +118,11 @@ gulp.task( 'make', function () {
     );
 
     moveFiles(
+        'fonts/**/*',
+        './dist/fonts/'
+    );
+
+    moveFiles(
         './licenses/**/*',
         './dist/licenses/'
     );
