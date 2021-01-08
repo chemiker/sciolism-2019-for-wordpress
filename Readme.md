@@ -1,6 +1,8 @@
 # sciolism 2019 for WordPress
 **sciolism 2019 for WordPress** is a port of the [Hugo](https://gohugo.io) theme [sciolism 2019](https://github.com/chemiker/sciolism-2019).
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/9724604a5bbdd5343a97/maintainability)](https://codeclimate.com/github/chemiker/sciolism-2019-for-wordpress/maintainability)
+
 ![sciolism 2019](https://github.com/chemiker/sciolism-2019-for-wordpress/raw/main/src/theme/screenshot.png)
 
 ## Installation
