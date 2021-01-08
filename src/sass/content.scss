@@ -4,6 +4,21 @@ html {
 	background-color: #FFF;
 }
 
+.skipLinks {
+	&:focus {
+		display: block;
+		position: absolute;
+		@include setMultiProperty(left top, 0);
+		@include setMultiProperty(height line-height, 30px);
+		width: 100%;
+		z-index: 30;
+		text-align: center;
+		background-color: $lightBlue;
+		color: #FFF;
+		font-family: $code;
+	}
+}
+
 article {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;

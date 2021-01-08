@@ -10,14 +10,14 @@ button {
 	font-family: $code;
 	border: {
 		@include setMultiProperty(width radius, 0);
-		bottom: #{$headerSpacer * 0.08} solid $darkGrey;
+		bottom: #{$headerSpacer * 0.08} solid $textColor;
 	}
 
 	padding: $iconSpacer;
 }
 
 input {
-	&.search-field {
+	&.searchField {
 		width: calc(100% - #{$iconSpacer * 8});
 		padding: $borderRadius;
 		-webkit-appearance: none;
@@ -37,18 +37,35 @@ input {
 		&::placeholder {
 			color: $darkerGrey;
 		}
+
+		&::-ms-clear,
+		&::-webkit-search-cancel-button { 
+			-webkit-appearance: none; 
+		}
 	}
 }
 
 textarea,
 input[type=submit],
-button[type=submit] {
-	border: #{$headerSpacer * 0.08} solid $darkGrey;
+button[type=submit]
+input[type=submit].searchSubmit:focus {
+	border: #{$headerSpacer * 0.08} solid $textColor;
 }
 
 input[type=submit],
 button[type=submit] {
 	padding: $iconSpacer 3 * $iconSpacer;
+
+	&.searchSubmit {
+		@include setMultiProperty(padding border, 0px);
+
+		&:focus {
+			position: relative;
+			display: inline;
+			width: 100%;
+			height: 30px;
+		}
+	}
 }
 
 input[type=submit]:hover,

@@ -69,12 +69,12 @@
 		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 			<label for="s-<?php echo esc_attr( $form_id ); ?>">
 				<span class="dashicons dashicons-search"></span>
-				<span class="screen-reader-text">
+				<span class="screenReaderText">
 					<?php esc_html_e( 'Search for:', 'sciolism-2019' ); ?>
 				</span>
-				<input id="s-<?php echo esc_attr( $form_id ); ?>" type="search" class="search-field" placeholder="<?php esc_attr_e( 'Search', 'sciolism-2019' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" />
+				<input id="s-<?php echo esc_attr( $form_id ); ?>" type="search" class="searchField" placeholder="<?php esc_attr_e( 'Search', 'sciolism-2019' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" />
 			</label>
-			<input type="submit" class="search-submit screen-reader-text" value="<?php echo esc_attr( 'Search', 'sciolism-2019' ); ?>" />
+			<input type="submit" class="screenReaderText searchSubmit" value="<?php echo esc_attr( 'Search', 'sciolism-2019' ); ?>" />
 		</form>
 		</footer>
 	<div id="copyright">

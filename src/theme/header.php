@@ -22,10 +22,10 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<a href="#primaryContent" class="screenReaderText">
+	<a href="#primaryContent" class="screenReaderText skipLinks">
 		<?php esc_html_e( 'Skip to content', 'sciolism-2019' ); ?>
 	</a>
-	<a href="#primaryNavigation" class="screenReaderText">
+	<a href="#primaryNavigation" class="screenReaderText skipLinks">
 		<?php esc_html_e( 'Skip to navigation', 'sciolism-2019' ); ?>
 	</a>
 	<header<?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true ) === 'true' ? ' style="margin-top: 31px;"' : '' ); ?> role="banner">

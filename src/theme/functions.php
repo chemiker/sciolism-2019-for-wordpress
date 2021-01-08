@@ -117,7 +117,7 @@ add_action(
 			'sciolism-theme',
 			get_template_directory_uri() . '/style.css',
 			array( 'dashicons' ),
-			'1.0.0', 
+			'1.0.1', 
 			'screen'
 		);
 	}
@@ -130,7 +130,7 @@ add_action(
 			'sciolism-theme',
 			get_template_directory_uri() . '/src/js/sciolism.theme.js',
 			array(),
-			'1.0.0',
+			'1.0.1',
 			true
 		);
 	}

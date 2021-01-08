@@ -33,6 +33,12 @@ Depending on user feedback those features might be included in future releases.
 
 == Changelog ==
 
+= 1.0.1 =
+* Skip links are shown on focus
+* Show submit button of search form on focus
+* Increase border-color contrast of comment form
+* Visually indicate current page in main menu with an icon
+
 = 1.0 =
 * Initial release
 

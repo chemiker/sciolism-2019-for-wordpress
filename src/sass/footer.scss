@@ -12,12 +12,10 @@ body>footer {
 }
 
 body>footer h2 i,
-#copyright,
-i.searchIcon {
+#copyright {
 	text-align: center;
 }
 
-i.searchIcon,
 body>footer h2 i {
 	margin-right: $iconSpacer;
 	width: $iconSpacer * 7;
@@ -80,7 +78,18 @@ body>footer {
 						text-decoration: underline;
 						color: $lightBlue;
 					}
+
+					&[aria-current="page"]:before {
+						display: inline-block;
+						font-family: $icon;
+						content: "\f345";
+						vertical-align: top;
+						font-size: $smallerTextSize;
+						margin-left: -15px;
+					}
 				}
+
+
 			}
 		}
 	}

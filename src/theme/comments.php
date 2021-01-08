@@ -2,7 +2,7 @@
 /**
  * Comments
  *
- * This template is used to display comments and the commen form.
+ * This template is used to display comments and the comment form.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

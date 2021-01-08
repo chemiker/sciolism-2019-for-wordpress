@@ -23,6 +23,12 @@ In comparison with the Hugo version of the theme there are some differences in t
 
 ## Changelog
 
+### 1.0.1
+* Skip links are shown on focus
+* Show submit button of search form on focus
+* Increase border-color contrast of comment form
+* Visually indicate current page in main menu with an icon
+
 ### 1.0
 
 * Initial release

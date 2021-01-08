@@ -19,7 +19,7 @@ get_header();
 		<div class="articleMiniMeta">
 			<time class="meta dashicons-before dashicons-calendar-alt" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 			<?php if ( has_category() ) : ?>
-				<span class="metaSeparator">&mdash;</span><span class="screenReaderText">{{ i18n "categories" }}: </span><span class="meta dashicons-before dashicons-category"><?php the_category( ', ' ); ?></span>
+				<span class="metaSeparator">&mdash;</span><span class="screenReaderText"><?php esc_html_e( 'Categories', 'sciolism-2019' ); ?>: </span><span class="meta dashicons-before dashicons-category"><?php the_category( ', ' ); ?></span>
 			<?php endif; ?>
 		</div>
 			<?php the_post(); ?>
