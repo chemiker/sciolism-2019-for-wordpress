@@ -2,8 +2,8 @@
  * FOOTER
  */
 
-nav#mainNavigation ul li a,
-nav#mainNavigation ul li a:visited,
+nav#primaryNavigation ul li a,
+nav#primaryNavigation ul li a:visited,
 aside#sideNavigation ul li a,
 aside#sideNavigation ul li a:visited
 #copyright,
@@ -49,13 +49,13 @@ body>footer {
 		}
 	}
 
-	nav#mainNavigation,
+	nav#primaryNavigation,
 	aside#sideNavigation,
 	form {
 		flex-basis: #{$siteWidth * 0.3};
 	}
 
-	nav#mainNavigation,
+	nav#primaryNavigation,
 	aside#sideNavigation {
 		vertical-align: top;
 		flex-grow: 0;

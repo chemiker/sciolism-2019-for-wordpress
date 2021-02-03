@@ -7,7 +7,7 @@ html {
 .skipLinks {
 	&:focus {
 		display: block;
-		position: absolute;
+		position: relative;
 		@include setMultiProperty(left top, 0);
 		@include setMultiProperty(height line-height, 30px);
 		width: 100%;

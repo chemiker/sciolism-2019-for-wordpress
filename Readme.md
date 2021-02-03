@@ -7,7 +7,7 @@
 
 ## Installation
 1. Download the latest [release](https://github.com/chemiker/sciolism-2019-for-wordpress/releases) of the theme or clone this repository and move the files in the `wp-content/themes` folder of your WordPress instance.
-2. Active the theme in your WordPress installation.
+2. Activate the theme in your WordPress installation.
 
 ## Features (sciolism 2019 vs. sciolism 2019 for WordPress)
 sciolism 2019 features a content focused design and has a lot of features that yield a modern and well performing experience of your website. That said it must be mentioned that the overall performance if used within WordPress does of course depend on the number of plugins installed etc.
@@ -24,6 +24,11 @@ In comparison with the Hugo version of the theme there are some differences in t
 **sciolism 2019** features two menus in the footer. The first is the `main` menu thought for the website navigation. The second, `side` can be e.g. be used to link to your social media accounts. The configuration is done via the customizer on your WordPress installation. There are also other tweaks available which can be accessed via the customizer, too.
 
 ## Changelog
+
+### 1.0.2
+* Fixed broken JS link
+* Fixed overlap of admin toolbar with header
+* Code refactoring
 
 ### 1.0.1
 * Skip links are shown on focus
@@ -52,10 +57,32 @@ This project is released under the [MIT license](LICENSE).
 
 It contains software and fonts released under individual licenses:
 
-* *normalize.css* - Copyright (c) Nicolas Gallagher and Jonathan Neal is released under the MIT license
-* *Hack (Font)* - Copyright (c) 2018 Source Foundry Authors is released under an individual license
-* *Open Sans (Font)* - Copyright (c) Google Corporation is released under the Apache License 2.0
-* *npm-font-open-sans* - Copyright (c) Enrico Hoffmann is released under the Apache License 2.0
-* *Roboto Slab (Font)* - Copyright (c) Google Corporation is released under the Apache License 2.0
-* *roboto-slab_all* - Copyright (c) 2019 Jan Bednar is released under the MIT license
-* Test files were generated using [WP-CLI](https://wp-cli.org/)
+normalize.css
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+License: MIT License, https://opensource.org/licenses/MIT
+Source: https://necolas.github.io/normalize.css/
+
+Hack (Font)
+Copyright (c) 2018 Source Foundry Authors
+License: MIT and Bitstream Vera license, https://github.com/source-foundry/Hack/blob/master/LICENSE.md
+Source: https://sourcefoundry.org/hack/
+
+Open Sans (Font)
+Copyright (c) Google Corporation
+License: Apache License, Version 2.0., http://www.apache.org/licenses/LICENSE-2.0
+Source: https://fonts.google.com/specimen/Open+Sans
+
+Roboto Slab (Font)
+Copyright (c) Google Corporation
+License: Apache License, Version 2.0., http://www.apache.org/licenses/LICENSE-2.0
+Source: https://fonts.google.com/specimen/Roboto+Slab
+
+npm-font-open-sans
+Copyright (c) Enrico Hoffmann
+License: Apache License, Version 2.0., http://www.apache.org/licenses/LICENSE-2.0
+https://www.google.de/search?q=npm-font-open-sans
+
+roboto-slab_all
+Copyright (c) Jan Bednar
+License: MIT License, https://opensource.org/licenses/MIT
+Source: https://www.npmjs.com/package/@openfonts/roboto-slab_all

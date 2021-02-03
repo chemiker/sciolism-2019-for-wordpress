@@ -33,6 +33,13 @@ input {
 		}
 		background-color: $grey;
 
+		&:focus {
+			border: {
+				width: 0;
+				bottom: #{$headerSpacer * 0.08} solid $darkerGrey;
+			}	
+		}
+
 		&,
 		&::placeholder {
 			color: $darkerGrey;
@@ -50,6 +57,13 @@ input[type=submit],
 button[type=submit]
 input[type=submit].searchSubmit:focus {
 	border: #{$headerSpacer * 0.08} solid $textColor;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+	margin: -#{$headerSpacer * 0.04};
+	border-width: #{$headerSpacer * 0.12};
 }
 
 input[type=submit],

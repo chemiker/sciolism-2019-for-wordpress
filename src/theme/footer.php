@@ -6,14 +6,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage sciolism-2019
+ * @package sciolism-2019
  * @since sciolism-2019 1.0.0
  */
 
 ?>
 	<footer>
-		<nav id="mainNavigation" role="navigation">
+		<nav id="primaryNavigation" role="navigation">
 			<?php
 			printf(
 				'<h2 class="dashicons-before %s">%s</h2>',
@@ -78,7 +77,19 @@
 		</form>
 		</footer>
 	<div id="copyright">
-		<p><?php esc_html_e( 'Powered by', 'sciolism-2019' ); ?> <a href="https://sciolism.de">sciolism 2019</a> <?php esc_html_e( 'and', 'sciolism-2019' ); ?> <a href="https://wordpress.org">WordPress</a></p>
+		<p>
+		<?php
+		printf(
+			'%1$s <a href="%2$s">%3$s</a> %4$s <a href="%5$s">%6$s</a>.',
+			esc_html__( 'Powered by', 'sciolism-2019' ),
+			esc_url( __( 'https://sciolism.de', 'sciolism-2019' ) ),
+			esc_html__( 'sciolism 2019', 'sciolism-2019' ),
+			esc_html__( 'and', 'sciolism-2019' ),
+			esc_url( __( 'https://wordpress.org', 'sciolism-2019' ) ),
+			esc_html__( 'WordPress', 'sciolism-2019' )
+		);
+		?>
+		</p>
 	</div>
 	<?php wp_footer(); ?>
 </body>

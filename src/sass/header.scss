@@ -20,6 +20,10 @@ header {
 	text-align: center;
 	border-bottom: #{$headerSpacer * 0.2} solid $darkGrey;
 
+	&.withToolBar {
+		margin-top: 31px;
+	}
+
 	a,
 	a:visited {
 		color: $darkerGrey;

@@ -6,8 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage sciolism-2019
+ * @package sciolism-2019
  * @since sciolism-2019 1.0.0
  */
 
@@ -28,7 +27,7 @@
 	<a href="#primaryNavigation" class="screenReaderText skipLinks">
 		<?php esc_html_e( 'Skip to navigation', 'sciolism-2019' ); ?>
 	</a>
-	<header<?php echo ( get_user_meta( get_current_user_id(), 'show_admin_bar_front', true ) === 'true' ? ' style="margin-top: 31px;"' : '' ); ?> role="banner">
+	<header<?php echo ( is_admin_bar_showing() === true ? ' class="withToolBar"' : '' ); ?> role="banner">
 		<h1>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php
@@ -36,9 +35,9 @@
 				
 				if ( $logo ) :
 					?>
-					<img src="<?php echo esc_url( wp_get_attachment_image_src( $logo )[0] ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+					<img src="<?php echo esc_url( wp_get_attachment_image_src( $logo )[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 				<?php else : ?>
-					<?php bloginfo( 'name' ); ?>
+					<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>
 				<?php endif; ?>
 			</a>
 		</h1>

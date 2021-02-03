@@ -6,8 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage sciolism-2019
+ * @package sciolism-2019
  * @since sciolism-2019 1.0.0
  */
 

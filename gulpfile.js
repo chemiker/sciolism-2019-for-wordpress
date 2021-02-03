@@ -80,12 +80,23 @@ function getThemeFiles() {
     );
 }
 
+function getJSFiles() {
+    return moveFiles(
+        'src/js/**/*',
+        './js/'
+    );
+}
+
 gulp.task( 'getStatics', function () {
     return prepareStatics();
 } );
 
 gulp.task( 'updateThemeFiles', function () {
     return getThemeFiles();
+} );
+
+gulp.task( 'getJSFiles', function () {
+    return getJSFiles();
 } );
 
 gulp.task( 'prepareDev', function () {
@@ -152,11 +163,13 @@ gulp.task( 'dev', function () {
     gulp.watch(
         [
             'src/sass/**/*.scss',
+            'src/js/**/*.js',
             'src/theme/**/*', 
         ],
         gulp.parallel(
             'updateThemeFiles',
-            'compileSass'
+            'compileSass',
+            'getJSFiles'
         )
     );
 } );
