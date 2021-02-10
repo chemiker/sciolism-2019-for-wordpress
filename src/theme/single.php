@@ -36,7 +36,7 @@ get_header();
 			$categories = get_the_category();
 			if ( $categories ) :
 				?>
-			<h4 class="dashicons-before dashicons-category"><?php esc_html_e( 'Categories', 'sciolism-2019' ); ?></h4>
+			<h3 class="dashicons-before dashicons-category"><?php esc_html_e( 'Categories', 'sciolism-2019' ); ?></h3>
 			<ul id="articleCategories">
 				<?php
 				foreach ( $categories as $category ) {
@@ -54,7 +54,7 @@ get_header();
 			$tags = get_the_tags();
 			if ( $tags ) :
 				?>
-			<h4 class="dashicons-before dashicons-tag"><?php esc_html_e( 'Tags', 'sciolism-2019' ); ?></h4>
+			<h3 class="dashicons-before dashicons-tag"><?php esc_html_e( 'Tags', 'sciolism-2019' ); ?></h3>
 			<ul id="articleTags">
 				<?php
 				foreach ( $tags as $single_tag ) { // If we name this variable $tag, themsniffer will throw an error: Overriding WordPress globals is prohibited. Found assignment to $tag.
@@ -73,14 +73,14 @@ get_header();
 	<div id="postNavigation">
 		<?php
 		previous_post_link(
-			'<span class="post-navigation previous-post">%link</span>',
-			'<span class="dashicons dashicons-arrow-left-alt"></span>' . esc_html__( 'Previous post', 'sciolism-2019' )
+			'<span class="dashicons dashicons-arrow-left-alt"></span><span class="post-navigation previous-post">%link</span>',
+			esc_html__( 'Previous post', 'sciolism-2019' )
 		);
 		?>
 		<?php
 		next_post_link(
-			'<span class="post-navigation next-post">%link</span>',
-			esc_html__( 'Next post', 'sciolism-2019' ) . '<span class="dashicons dashicons-arrow-right-alt"></span>'
+			'<span class="post-navigation next-post">%link</span><span class="dashicons dashicons-arrow-right-alt"></span>',
+			esc_html__( 'Next post', 'sciolism-2019' )
 		);
 		?>
 	</div>

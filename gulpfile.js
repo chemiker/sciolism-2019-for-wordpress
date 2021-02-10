@@ -1,8 +1,11 @@
-var gulp = require( 'gulp' ),
-    replace = require( 'gulp-replace' ),
-    merge = require( 'merge-stream' ),
-    concat = require( 'gulp-concat' ),
-    sass = require( 'gulp-sass' );
+var gulp        = require( 'gulp' ),
+    replace     = require( 'gulp-replace' ),
+    merge       = require( 'merge-stream' ),
+    concat      = require( 'gulp-concat' ),
+    sass        = require( 'gulp-sass' ),
+    browserSync = require( 'browser-sync' ).create(),
+    yargs       = require( 'yargs' ),
+    host        = yargs.argv.host;
 
 function moveAndRenameFile( origin, name, destination ) {
     return gulp.src( origin )
@@ -99,6 +102,11 @@ gulp.task( 'getJSFiles', function () {
     return getJSFiles();
 } );
 
+gulp.task( 'browserSync', function ( callback ) {
+    browserSync.reload();
+    callback();
+} );
+
 gulp.task( 'prepareDev', function () {
     return gulp.parallel(
         'getStatics',
@@ -160,16 +168,21 @@ gulp.task( 'make', function () {
 
 
 gulp.task( 'dev', function () {
-    gulp.watch(
+    browserSync.init( { proxy: host } );
+
+    return gulp.watch(
         [
             'src/sass/**/*.scss',
             'src/js/**/*.js',
             'src/theme/**/*', 
         ],
-        gulp.parallel(
-            'updateThemeFiles',
-            'compileSass',
-            'getJSFiles'
+        gulp.series(
+            gulp.parallel(
+                'updateThemeFiles',
+                'compileSass',
+                'getJSFiles',
+            ),
+            'browserSync'
         )
     );
 } );

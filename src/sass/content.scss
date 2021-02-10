@@ -253,6 +253,7 @@ div.articleMiniMeta a:visited {
 
 	&:hover {
 		color: #000;
+		text-decoration: underline;
 	}
 }
 
@@ -290,7 +291,7 @@ div#articleMeta {
 		grid-column: 1 / 3;
 	}
 
-	h4 {
+	h3 {
 		margin-bottom: 0px;
 		color: $textColor;
 
@@ -298,11 +299,12 @@ div#articleMeta {
 			margin-top: 0;
 		}
 
-		i {
+		&:before {
 			display: inline-block;
 			width: 1.5rem;
 			text-align: center;
 			margin-right: $iconSpacer;
+			margin-left: -3 * $iconSpacer;
 			color: $darkGrey;
 			font-size: $smallerTextSize;
 		}

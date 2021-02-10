@@ -96,7 +96,10 @@ figure.wp-block-gallery {
 }
 
 .next-post {
-	margin-left: $headerSpacer / 2;
+	margin: {
+		left: $headerSpacer / 2;
+		right: .2em; // This value is derived from the dashicons class.
+	}
 }
 
 .previous-post,
@@ -110,6 +113,7 @@ figure.wp-block-gallery {
 
 		&:hover {
 			color: #000;
+			text-decoration: underline;
 		}
 	}
 }
@@ -124,5 +128,24 @@ figure.wp-block-gallery {
 	a,
 	a:visited {
 		border-bottom: none;
+	}
+}
+
+.logged-in-as {
+	a,
+	a:visited {
+		border-bottom: 2px solid $lightBlue;
+
+		&:hover {
+			border: none;
+		}
+	}
+}
+
+#cancel-comment-reply-link {
+	border-bottom: 2px solid $lightBlue;
+
+	&:hover {
+		border: none;
 	}
 }

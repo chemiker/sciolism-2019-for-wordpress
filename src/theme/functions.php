@@ -121,7 +121,7 @@ function sciolism_enqueue_styles() {
 		'sciolism-theme',
 		get_template_directory_uri() . '/style.css',
 		array( 'dashicons' ),
-		'1.0.2', 
+		'1.0.3', 
 		'screen'
 	);
 }
@@ -136,7 +136,7 @@ function sciolism_enqueue_scripts() {
 		'sciolism-theme',
 		get_template_directory_uri() . '/js/sciolism.theme.js',
 		array(),
-		'1.0.2',
+		'1.0.3',
 		true
 	);
 }

@@ -25,6 +25,11 @@ In comparison with the Hugo version of the theme there are some differences in t
 
 ## Changelog
 
+### 1.0.3
+* Increase contrast ratio for meta links and underline them on hover
+* Use h3 instead of h4 on single post pages
+* Added automated browser reload to dev tools
+
 ### 1.0.2
 * Fixed broken JS link
 * Fixed overlap of admin toolbar with header

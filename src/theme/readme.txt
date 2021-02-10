@@ -33,6 +33,10 @@ Depending on user feedback those features might be included in future releases.
 
 == Changelog ==
 
+= 1.0.3 =
+* Increase contrast ratio for meta links and underline them on hover
+* Use h3 instead of h4 on single post pages
+
 = 1.0.2 =
 * Fixed broken JS link
 * Fixed overlap of admin toolbar with header
